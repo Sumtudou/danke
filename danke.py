@@ -87,14 +87,14 @@ class Location:
     #[img[i],title[i],price[i],traffic[i],type[i],url,city,detailItemList[i]
     def saveTocsv(self,data):
         header = ['img', 'title','price','traffic','type','url','city','square','height','roomsum','direction']
-        with open('danke.csv', 'a+', encoding='utf-8',newline='') as f:
+        with open('csv/danke.csv', 'a+', encoding='utf-8', newline='') as f:
             writer = csv.writer(f)
             writer.writerows(data)
 
     # [img[i],title[i],price[i],traffic[i],type[i],url,city,detailItemList[i]
     def saveToCsvHeader(self):
         header = ['img', 'title','price','traffic','type','url','city','square','height','roomsum','direction']
-        with open('danke.csv', 'a+', encoding='utf-8', newline='') as f:
+        with open('csv/danke.csv', 'a+', encoding='utf-8', newline='') as f:
             writer = csv.writer(f)
             writer.writerow(header)
 

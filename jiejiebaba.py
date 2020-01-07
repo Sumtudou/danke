@@ -25,15 +25,15 @@ class CutWords:
 
     def getTheText(self):
         result = []
-        with open('notin1.txt', 'r', encoding='utf-8') as f:
+        with open('txt/notin1.txt', 'r', encoding='utf-8') as f:
             for line in f:
                 result.append(line.strip('\n'))
 
-        with open('notin2.txt', 'r', encoding='utf-8') as f:
+        with open('txt/notin2.txt', 'r', encoding='utf-8') as f:
             for line in f:
                 result.append(line.strip('\n'))
 
-        with open('notin3.txt', 'r', encoding='utf-8') as f:
+        with open('txt/notin3.txt', 'r', encoding='utf-8') as f:
             for line in f:
                 result.append(line.strip('\n'))
 
@@ -87,9 +87,9 @@ if __name__ == '__main__':
             the_txt  =the_txt+ ' '+item[0]
     print(the_txt)
 
-    image1 = PIL.Image.open(r'C:\Users\11630\Desktop\love.jpg')
+    image1 = PIL.Image.open(r'image/love.jpg')
     MASK = np.array(image1)
     txt = "life is short, you need python"
     w = wordcloud.WordCloud(background_color="white",font_path="D://pythonRoot//venv//FZZH-RHJW.TTF",repeat=False,collocations=False,mask= MASK)
     w.generate(the_txt)
-    w.to_file("pywcloud.png")
+    w.to_file("image/pywcloud.png")
